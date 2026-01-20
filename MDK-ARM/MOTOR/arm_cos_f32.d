@@ -1,0 +1,11 @@
+motor\arm_cos_f32.o: ..\User\Dsp\arm_cos_f32.c
+motor\arm_cos_f32.o: ..\User\Dsp\CoreSupport\arm_math.h
+motor\arm_cos_f32.o: ..\User\Dsp\CoreSupport\core_cm4.h
+motor\arm_cos_f32.o: E:\mdk\ARM\ARMCC\Bin\..\include\stdint.h
+motor\arm_cos_f32.o: ..\User\Dsp\CoreSupport\core_cmInstr.h
+motor\arm_cos_f32.o: ..\User\Dsp\CoreSupport\cmsis_armcc.h
+motor\arm_cos_f32.o: ..\User\Dsp\CoreSupport\core_cmFunc.h
+motor\arm_cos_f32.o: ..\User\Dsp\CoreSupport\core_cmSimd.h
+motor\arm_cos_f32.o: E:\mdk\ARM\ARMCC\Bin\..\include\string.h
+motor\arm_cos_f32.o: E:\mdk\ARM\ARMCC\Bin\..\include\math.h
+motor\arm_cos_f32.o: ..\User\Dsp\CoreSupport\arm_common_tables.h
