@@ -158,7 +158,7 @@ void MX_ADC2_Init(void)
 
   /** Configure Injected Channel
   */
-  sConfigInjected.InjectedChannel = ADC_CHANNEL_2;
+  sConfigInjected.InjectedChannel = ADC_CHANNEL_3;
   sConfigInjected.InjectedRank = ADC_INJECTED_RANK_1;
   sConfigInjected.InjectedSamplingTime = ADC_SAMPLETIME_6CYCLES_5;
   sConfigInjected.InjectedSingleDiff = ADC_SINGLE_ENDED;
@@ -267,13 +267,33 @@ void HAL_ADC_MspInit(ADC_HandleTypeDef* adcHandle)
     }
 
     __HAL_RCC_GPIOA_CLK_ENABLE();
+    __HAL_RCC_GPIOC_CLK_ENABLE();
+    __HAL_RCC_GPIOB_CLK_ENABLE();
     /**ADC2 GPIO Configuration
     PA1     ------> ADC2_IN2
+    PA4     ------> ADC2_IN17
+    PA5     ------> ADC2_IN13
+    PA6     ------> ADC2_IN3
+    PA7     ------> ADC2_IN4
+    PC4     ------> ADC2_IN5
+    PC5     ------> ADC2_IN11
+    PB2     ------> ADC2_IN12
     */
-    GPIO_InitStruct.Pin = B_PHASE_Pin;
+    GPIO_InitStruct.Pin = B_PHASE_Pin|GPIO_PIN_4|GPIO_PIN_5|GPIO_PIN_6
+                          |GPIO_PIN_7;
     GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
-    HAL_GPIO_Init(B_PHASE_GPIO_Port, &GPIO_InitStruct);
+    HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+    GPIO_InitStruct.Pin = GPIO_PIN_4|GPIO_PIN_5;
+    GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+
+    GPIO_InitStruct.Pin = GPIO_PIN_2;
+    GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
     /* ADC2 interrupt Init */
     HAL_NVIC_SetPriority(ADC1_2_IRQn, 0, 0);
@@ -334,8 +354,20 @@ void HAL_ADC_MspDeInit(ADC_HandleTypeDef* adcHandle)
 
     /**ADC2 GPIO Configuration
     PA1     ------> ADC2_IN2
+    PA4     ------> ADC2_IN17
+    PA5     ------> ADC2_IN13
+    PA6     ------> ADC2_IN3
+    PA7     ------> ADC2_IN4
+    PC4     ------> ADC2_IN5
+    PC5     ------> ADC2_IN11
+    PB2     ------> ADC2_IN12
     */
-    HAL_GPIO_DeInit(B_PHASE_GPIO_Port, B_PHASE_Pin);
+    HAL_GPIO_DeInit(GPIOA, B_PHASE_Pin|GPIO_PIN_4|GPIO_PIN_5|GPIO_PIN_6
+                          |GPIO_PIN_7);
+
+    HAL_GPIO_DeInit(GPIOC, GPIO_PIN_4|GPIO_PIN_5);
+
+    HAL_GPIO_DeInit(GPIOB, GPIO_PIN_2);
 
     /* ADC2 interrupt Deinit */
   /* USER CODE BEGIN ADC2:ADC1_2_IRQn disable */

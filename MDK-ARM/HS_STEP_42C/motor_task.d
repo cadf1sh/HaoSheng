@@ -10,7 +10,7 @@ hs_step_42c\motor_task.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.
 hs_step_42c\motor_task.o: ../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h
 hs_step_42c\motor_task.o: ../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g431xx.h
 hs_step_42c\motor_task.o: ../Drivers/CMSIS/Include/core_cm4.h
-hs_step_42c\motor_task.o: E:\mdk\ARM\ARMCC\Bin\..\include\stdint.h
+hs_step_42c\motor_task.o: D:\Keil_v5\ARM\Version5.06\Bin\..\include\stdint.h
 hs_step_42c\motor_task.o: ../Drivers/CMSIS/Include/cmsis_version.h
 hs_step_42c\motor_task.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 hs_step_42c\motor_task.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
@@ -18,7 +18,7 @@ hs_step_42c\motor_task.o: ../Drivers/CMSIS/Include/mpu_armv7.h
 hs_step_42c\motor_task.o: ../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h
 hs_step_42c\motor_task.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h
 hs_step_42c\motor_task.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-hs_step_42c\motor_task.o: E:\mdk\ARM\ARMCC\Bin\..\include\stddef.h
+hs_step_42c\motor_task.o: D:\Keil_v5\ARM\Version5.06\Bin\..\include\stddef.h
 hs_step_42c\motor_task.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h
 hs_step_42c\motor_task.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h
 hs_step_42c\motor_task.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h
@@ -45,8 +45,8 @@ hs_step_42c\motor_task.o: ../Core/Inc/gpio.h
 hs_step_42c\motor_task.o: ../Core/Inc/spi.h
 hs_step_42c\motor_task.o: ../DSP_LIB/Include/arm_math.h
 hs_step_42c\motor_task.o: ../DSP_LIB/Include/core_cm4.h
-hs_step_42c\motor_task.o: E:\mdk\ARM\ARMCC\Bin\..\include\string.h
-hs_step_42c\motor_task.o: E:\mdk\ARM\ARMCC\Bin\..\include\math.h
+hs_step_42c\motor_task.o: D:\Keil_v5\ARM\Version5.06\Bin\..\include\string.h
+hs_step_42c\motor_task.o: D:\Keil_v5\ARM\Version5.06\Bin\..\include\math.h
 hs_step_42c\motor_task.o: ../User/Peripheral/encoder.h
 hs_step_42c\motor_task.o: ../User/Algorithm/motion_control.h
 hs_step_42c\motor_task.o: ../User/Peripheral/current_sample.h

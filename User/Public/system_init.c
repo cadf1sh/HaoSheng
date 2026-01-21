@@ -51,8 +51,6 @@ void All_Peripheral_Init(void){
     HAL_TIM_Base_Start(&htim6);
     HAL_TIM_Base_Start_IT(&htim6);
     
-    /*开启电源指示灯*/
-    HAL_GPIO_WritePin(LED_G_GPIO_Port, LED_G_Pin, GPIO_PIN_SET);
 }
 
 /**

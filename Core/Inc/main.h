@@ -65,10 +65,6 @@ void Error_Handler(void);
 #define A_PHASE_GPIO_Port GPIOA
 #define POWER_VOLT_Pin GPIO_PIN_3
 #define POWER_VOLT_GPIO_Port GPIOA
-#define LED_G_Pin GPIO_PIN_5
-#define LED_G_GPIO_Port GPIOA
-#define LED_B_Pin GPIO_PIN_6
-#define LED_B_GPIO_Port GPIOA
 #define SPI2_NSS_Pin GPIO_PIN_12
 #define SPI2_NSS_GPIO_Port GPIOB
 #define ENA_Pin GPIO_PIN_15
