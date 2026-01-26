@@ -49,33 +49,31 @@ extern "C" {
 
 /* USER CODE END EM */
 
+void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
+
 /* Exported functions prototypes ---------------------------------------------*/
 void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
-
+extern ADC_HandleTypeDef hadc2;
+extern SPI_HandleTypeDef hspi3;
+extern TIM_HandleTypeDef htim1;
+extern TIM_HandleTypeDef htim3;
+extern UART_HandleTypeDef huart1;
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define MOS_TEMP_Pin GPIO_PIN_0
-#define MOS_TEMP_GPIO_Port GPIOA
-#define B_PHASE_Pin GPIO_PIN_1
-#define B_PHASE_GPIO_Port GPIOA
-#define A_PHASE_Pin GPIO_PIN_2
-#define A_PHASE_GPIO_Port GPIOA
-#define POWER_VOLT_Pin GPIO_PIN_3
-#define POWER_VOLT_GPIO_Port GPIOA
-#define SPI2_NSS_Pin GPIO_PIN_12
-#define SPI2_NSS_GPIO_Port GPIOB
-#define ENA_Pin GPIO_PIN_15
-#define ENA_GPIO_Port GPIOA
-#define ENB_Pin GPIO_PIN_3
-#define ENB_GPIO_Port GPIOB
-#define LED_R_Pin GPIO_PIN_5
-#define LED_R_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
+typedef  uint8_t          u8;
+typedef  uint16_t         u16;
+typedef  uint32_t         u32;
+typedef  uint64_t         u64;
 
+typedef  int8_t           s8;
+typedef  int16_t          s16;
+typedef  int32_t          s32;
+typedef  signed long long s64;
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus
